@@ -44,6 +44,7 @@ function List(props) {
         placeholder="Add To Do item"
         name={props.list}
         value={item.itemName}
+        className="inputField"
       ></input>
       <button onClick={addItem} className="btn btn-warning">
         Add
