@@ -10,11 +10,14 @@ function CreateList(props){
 
     const handleClick = () => {
         props.onCreate(newList);
+        setList("")
     }
+
+
     return (
         <div>
-            <input onChange={handleChange} placeholder="enter the list name" name="listName"></input>
-            <button onClick={handleClick} >Create</button>
+            <input onChange={handleChange} placeholder="enter the list name" name="listName" value={newList}></input>
+            <button onClick={handleClick} className="btn btn-primary">Create</button>
         </div>
     )
 

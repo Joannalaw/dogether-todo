@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import CreateList from "./CreateList";
-import List from "./List";
+import DashBoard from "./Dashboard";
 
 function App() {
   const [lists, setLists] = useState([]);
@@ -9,10 +9,11 @@ function App() {
       return [...prevList, props];
     });
   }
+
   return (
     <div>
       <CreateList onCreate={createList} />
-      <List listName={lists} />
+      <DashBoard listName={lists} />
     </div>
   );
 }
